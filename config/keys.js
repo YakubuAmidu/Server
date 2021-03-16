@@ -1,8 +1,8 @@
-// keys.js: Figure out what the set of credentials will be
+// keys.js - figure out what set of credentials to return
 if (process.env.NODE_ENV === 'production') {
-  // We are production. Return the set of keys
+  // we are in production - return the prod set of keys
   module.exports = require('./prod');
 } else {
-  // We are in development. Return  the set of keys
+  // we are in development - return the dev keys!!!
   module.exports = require('./dev');
 }
