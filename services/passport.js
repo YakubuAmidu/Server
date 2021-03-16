@@ -29,8 +29,9 @@ passport.use(
           done(null, existingUser);
         } else {
           // We do not have a user record with this ID, make a new record
-          new User({ googlId: profile.id }).save();
-          // .then((user) => done(null, user));
+          new User({ googleId: profile.id })
+            .save()
+            .then((user) => done(null, user));
         }
       });
     }
