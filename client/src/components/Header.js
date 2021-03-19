@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <nav>
         <div className='nav-wrapper'>
-          <a class='left brand-logo'>Emaily</a>
+          <a className='left brand-logo'>Emaily</a>
           <ul className='right'>
             <li>
               <a>Log in with google</a>
