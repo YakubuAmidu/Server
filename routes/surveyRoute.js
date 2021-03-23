@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const recipientSchema = require('../models/Recipient');
 const requireCredits = require('../models/requireCredits');
 const requireLogin = require('../models/requireLogin');
+const Mailer = require('../services/Mailer');
 
 const Survey = mongoose.model('surveys');
 
@@ -19,5 +20,8 @@ module.exports = (app) => {
       _user: req.user.id,
       dateSent: Date.now(),
     });
+
+    // Great place to send an email
+    const mailer = new Mailer(survey, template);
   });
 };
