@@ -3,7 +3,12 @@ import React, { Component } from 'react';
 const Dashboard = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
+      Dashboard
+      <div className='fixed-action-btn'>
+        <a className='btn-floating btn-large red'>
+          <i className='material-icons'>Add</i>
+        </a>
+      </div>
     </div>
   );
 };
