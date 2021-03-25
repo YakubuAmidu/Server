@@ -10,7 +10,11 @@ class SurveyNew extends Component {
     if (this.state.showFormReview) {
       return <SurveyFormReview />;
     }
-    return <SurveyForm />;
+    return (
+      <SurveyForm
+        onSurveySubmit={() => this.setState({ showFormReview: true })}
+      />
+    );
   }
 
   render() {
